@@ -1,7 +1,7 @@
 ﻿program prog14;
  
 var N, M, i, x:integer;
- 
+
 begin
 read(N, M);
 for i := 1 to N*M do
@@ -13,3 +13,4 @@ for i := 1 to N*M do
     break;
     end;
     end;
+end.
