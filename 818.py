@@ -1,0 +1,1 @@
+print(abs((int(input())-1) - sum(list(map(int, input().split())))))
