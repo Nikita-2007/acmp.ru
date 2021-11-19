@@ -1,1 +1,3 @@
-print('NO') if input().find('0') != -1 else print('YES')
+N = int(input())
+arr = list(map(int, input().split()))
+print(min(arr), max(arr))
