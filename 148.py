@@ -1,7 +1,7 @@
 A, B = map(int, input().split())
-while A != B:
+while A != 0 and B != 0:
     if A > B:
-        A -= B
+        A %= B
     else:
-        B -= A        
-print(A)
+        B %= A
+print(A + B)
