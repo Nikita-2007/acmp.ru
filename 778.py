@@ -1,1 +1,1 @@
-print(sum(map(int, input().split()))//27
+﻿print(sum(map(int, input().split()))//27)
