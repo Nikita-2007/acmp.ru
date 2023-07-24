@@ -6,14 +6,14 @@ for i in range(n):
 	arr1.append(list(input()))
 for i in range(n):
 	arr2 = list(map(int, input().split()))
-	for j in arr1[i]:
-		if j == 'R' and (arr2[i] == 0 or arr2[i] == 1 or arr2[i] == 2 or arr2[i] == 3):
+	for j in range(m):
+		if arr1[i][j] == 'R' and (arr2[j] == 0 or arr2[j] == 1 or arr2[j] == 2 or arr2[j] == 3):
 			t = True
 			break
-		if j == 'G' and (arr2[i] == 0 or arr2[i] == 1 or arr2[i] == 4 or arr2[i] == 5):
+		if arr1[i][j] == 'G' and (arr2[j] == 0 or arr2[j] == 1 or arr2[j] == 4 or arr2[j] == 5):
 			t = True
 			break
-		if j == 'B' and (arr2[i] == 6 or arr2[i] == 4 or arr2[i] == 2 or arr2[i] == 0):
+		if arr1[i][j] == 'B' and (arr2[j] == 6 or arr2[j] == 4 or arr2[j] == 2 or arr2[j] == 0):
 			t = True
 			break
 	if t:
