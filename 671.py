@@ -1,11 +1,23 @@
-n = int(input())
-s = len(str(n))-1
-r = 0
-for i in range(1, s+1):
-	r += 2**i
-for i in range(2**(s+1)):
-	if int(''.join(['4' if x=='0' else '7' for x in list(('{:0'+str(s+1)+'}').format(int(str(bin(i))[2:])))])) <= n:
-		r += 1
-	else:
-		break
-print(r)
+n = input()
+arr = []
+s = -1
+
+def f(p, r):
+	if not r:
+		return 2**(len(n)-p)
+	if p == len(n):
+		return 1
+	t = 0
+	if arr[p] > 4:
+		t += f(p+1, 0)
+	if arr[p] > 7:
+		t += f(p+1, 0)
+	if arr[p] == 4 or arr[0] == 7:
+		t += f(p+1, 1)
+	return t
+
+for i in range(len(n)):
+	arr.append(int(n[i]))
+	s += 2**i
+
+print(s+f(0, 1))
