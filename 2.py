@@ -1,2 +1,14 @@
+s = 0
 n = int(input())
-print(int((n/2)*(n+1))) if n > 0 else print(int(-((-n+1)*(-n/2)-1)))
+if n >= 0:
+	for i in range(1, n+1):
+		s += i
+	if s == 0:
+		s = 1
+	elif s == 1:
+		s = 0
+else:
+	for i in range(1, -n+1):
+		s -= i
+	s += 1
+print(s)
